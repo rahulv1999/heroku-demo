@@ -8,6 +8,8 @@ model = pickle.load(open('ML.pkl','rb'))
 
 @app.route('/')
 def home():
+    df = pd.DataFrame([2],columns='columns')   
+    df.to_csv('test.csv')
     return render_template('index.html')
 
 @app.route('/predict', methods = ['POST'])
@@ -19,9 +21,6 @@ def predict():
      finalfeatures =  finalfeatures.reshape(1,-1)
      prediction = model.predict(finalfeatures)
      output = round(prediction[0],2)
-     df = pd.DataFrame([2],columns='columns')   
-     df.to_csv('test.csv')
-     
      
      return render_template('index.html', prediction_text = "Salary is : {}".format(output))
      
