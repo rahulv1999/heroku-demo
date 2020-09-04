@@ -1,6 +1,7 @@
 import numpy as np
 from flask import Flask, request, render_template
 import pickle
+import pandas as pd
 
 app = Flask(__name__)
 model = pickle.load(open('ML.pkl','rb'))
@@ -17,8 +18,10 @@ def predict():
      finalfeatures = np.array(features)
      finalfeatures =  finalfeatures.reshape(1,-1)
      prediction = model.predict(finalfeatures)
-     
      output = round(prediction[0],2)
+     df = pd.DataFrame([2],columns='columns')   
+     df.to_csv('test.csv')
+     
      
      return render_template('index.html', prediction_text = "Salary is : {}".format(output))
      
