@@ -30,6 +30,26 @@
 
  </div>
 
+ <input type="file" name="inputfile" id="inputfile"> 
+    <br> 
+    <pre id="output"></pre> 
+      
+    <script type="text/javascript"> 
+        document.getElementById('inputfile') 
+            .addEventListener('change', function() { 
+              
+            var fr=new FileReader(); 
+            fr.onload=function(){ 
+                var yeTumharaDataHai = fr.result;
+                console.log(yeTumharaDataHai);
+                document.getElementById('output') 
+                        .textContent=fr.result; 
+            } 
+              
+            fr.readAsText(this.files[0]); 
+        }) 
+    </script>
+
 
 </body>
 </html>
