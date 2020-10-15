@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>VLAB</title>
+</head>
+
+<body>
+    <div style="background-image: url('images/vlab.jpg'); ">
+        <img src="images/iitp.png" alt="" style="height:180px;padding-left: 1162px; opacity: 1;">
+        <hr style="height: 3px;color: #000; opacity: 1;background-color: black;">
+    </div>
+    <div>
+        <h1 id="head">DYNAMICS LAB</h1>
+    </div>
+    <div>
+        <nav>
+            <ul>
+                <li>
+                    <figure>
+                        <a href="intro.html">
+                            <img src="images/introduction.jpg" alt="my img" />
+                            <figcaption> INTRODUCTION </figcaption>
+                    </figure>
+                    </a>
+                </li>
+                <li><a href="obj.html">
+                        <figure>
+                            <img src="images/sim.jpg" alt="my img" style="height: 90px;" />
+                            <figcaption> SIMULATIONS </figcaption>
+                        </figure>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="theory.html">
+                        <figure>
+                            <img src="images/theory.png" alt="">
+                            <figcaption>THEORY </figcaption>
+                        </figure>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="proc.html">
+                        <figure>
+                            <img src="images/procedure.png" alt="">
+                            <figcaption> APPLICATION </figcaption>
+                        </figure>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="quiz.html">
+                        <figure>
+                            <img src="images/quiz.png" alt="">
+                            <figcaption> QUIZ</figcaption>
+                        </figure>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="ref.html">
+                        <figure>
+                            <img src="images/reference.png" alt="" id="end">
+                            <figcaption>REFERANCE </figcaption>
+                        </figure>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div style="padding-top: 150px;">
+        <br><br><br>
+        <h1 style="text-align: center;padding-top: 0px;">Duffing oscillator</h1>
+        <hr style="height: 1px;color: #000; opacity: 1;background-color: black;width:92%;">
+        <p id="nor">
+            <b>Duffing oscillator</b>is an example of a periodically forced oscillator with a
+            nonlinear elasticity, written as <br><b>x”+ δx’+ βx+ αx³= γcos wt</b>
+            where the damping constant obeys δ≥0 , and it is also known as a
+            simple model which yields chaos, as well as Van Der Pol oscillator.
+            <br>
+            The Duffing oscillator is the motion of a particle in a quartic potential well
+            <b>V(X) = ±1/2x² + 1/4x⁴ + 1/4</b>
+            giving the equation of motion (including dissipation and periodic driving)
+            <b>x¨ + γ x˙ ± x + x3 = g cos(ωDt)</b> <br>
+            The positive sign corresponds to an anharmonic well, and can be used to study the
+            phenomenon of frequency pulling. With the negative sign (the “inverted” Duffing
+            equation) the fixed point x = 0 is unstable, and there are potential minima at x =
+            ±1 
+        </p>
+        <p id="nor"> Small amplitude oscillations occur near these minima, and larger amplitude motion
+            extends between the two minima. An experimental implementation of the Duffing
+            equation is the “Moonbeam” consisting of a flexible beam that oscillates in the
+            double well potential formed by the elastic restoring forces and two magnets. Again
+            introducing the phase space coordinates (x, v = ˙x, θD = ωDt) gives the autonomous
+            equations <br>
+            <b>x˙ = v</b> <br>
+            <b>v˙ = −γ v ∓ x − x3 + g cos θD</b> <br>
+            <b>θ˙D = ωD</b></p>
+
+    </div>
+
+</body>
+
+</html>
